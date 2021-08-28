@@ -1,24 +1,34 @@
-import React from 'react'
 
-class Activity extends React.Component{
-    render(){
-        return(
+
+function Activity(props){
+        if(props.todo.length===0){
+            return ''
+        }
+        let array=[]
+        for(let i=1;i<=props.days+1;i++){
+            array.push(<div>{i}</div>)
+        }
+        return [...props.todo].map((elm)=>{return(
             <section className='activity'>
                 <div className='month'>
-                    <h2>Random</h2>
+                    <h2>{elm}</h2>
                     <div>
-                        <h5>August</h5>
+                        <h5>{props.month}</h5>
                     </div>
                 </div>
                 <div className='days'>
-
+                    {
+                        array.map((elm)=>{return elm})
+                    }
                 </div>
                 <div className='cross'>
-                    <div>X</div>
+                    <div onClick={()=>props.delete(elm)}>X</div>
                 </div>
             </section>
+        )}
         )
+        
     }
-}
+
 
 export default Activity

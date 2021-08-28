@@ -51,6 +51,7 @@ table {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 6rem;
+    
 }
 header{
     text-align: center;
@@ -73,19 +74,20 @@ form>button{
     height: 2.2rem;
     border: 0;
     color: white;
-    background-color: rgb(127, 199, 127);
+    background-color: rgb(79,210,179);
     cursor: pointer;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 
 .activity{
-    border: 1px solid black;
-    height: 14rem;
+    border: 1px solid rgb(233, 231, 231);
+    height: 16rem;
     margin-top: 4rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 8px 8px 9px 1px rgba(0,0,0,0.1);
 }
 .month{
     height: 90%;
@@ -94,7 +96,7 @@ form>button{
     background-color: rgb(245, 249, 252);
     justify-content: center;
     align-items: center;
-    flex: 0 1 18%;
+    flex: 0 1 20%;
 }
 .month>h2{
     font-weight: 800;
@@ -110,12 +112,32 @@ form>button{
     letter-spacing: 2px;
 }
 .days{
-    border: 1px solid black;
     height: 90%;
-    flex:  0 1 75%;
+    flex:  0 1 74.5%;
+    display: flex;
+    
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.days>div{
+    height: 2.5rem;
+    width: 4rem;
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(233, 231, 231);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.days>div:hover{
+    border: 1px solid blue;
 }
 .cross{
     height: 90%;
+    display: flex;
+    flex: 0 1 1%;
+    
 }
 .cross>div{
     height: 1.5rem;
